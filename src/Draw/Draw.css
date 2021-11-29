@@ -1,0 +1,24 @@
+.info-window {
+    height: auto;
+    width: 400px;
+    z-index: 20000;
+    background-color: white;
+    border: 2px turquoise solid;
+    border-radius: 0 0 10px 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 10px;
+}
+.basic_column {
+    height:16;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-container {
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+}

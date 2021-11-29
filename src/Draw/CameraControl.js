@@ -7,10 +7,10 @@ class CameraControl {
         renderer.domElement.addEventListener('mousemove', event => {
             if(!this.press){ return }
 
-            if(event.button == 0){
+            if(event.button === 0){
                 camera.position.y -= event.movementY * this.sensitivity
                 camera.position.x -= event.movementX * this.sensitivity        
-            } else if(event.button == 2){
+            } else if(event.button === 2){
                 camera.quaternion.y -= event.movementX * this.sensitivity/10
                 camera.quaternion.x -= event.movementY * this.sensitivity/10
             }
@@ -23,13 +23,13 @@ class CameraControl {
         renderer.domElement.addEventListener('mouseleave', () => { this.press = false })
 
         document.addEventListener('keydown', event => {
-            if(event.key == 'Shift'){
+            if(event.key === 'Shift'){
                 this.zoomMode = true
             }
         })
 
         document.addEventListener('keyup', event => {
-            if(event.key == 'Shift'){
+            if(event.key === 'Shift'){
                 this.zoomMode = false
             }
         })

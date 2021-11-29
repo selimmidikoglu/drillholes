@@ -1741,14 +1741,41 @@ var data = [
     
 ]
 
-
+//"HOLE_NUMBER",
+//     "X",
+//     "Y",
+//     "Z",
+//     "Recovery_Value",
+//     "Recovery_perc",
+//     "RQD_Value",
+//     "Rqd_perc",
+//     "RMR_value"
 var a = data.map(el => {
     var b = {};
+    b.HOLE_NUMBER = el[0];
     b.x = parseFloat(el[1]);
     b.y = parseFloat(el[2]);
     b.z = parseFloat(el[3]);
     b.rmr = parseFloat(el[8]);
+    b.Recovery_Value = el[4];
+    b.Recovery_perc = el[5];
+    b.RQD_Value = el[6];
+    b.Rqd_perc = el[7];
+    b.RMR_value = el[8];
     return b;
 })
-console.log(a)
+export const drillNames = () => {
+
+    var drillholesNames = [];
+    for (let i = 0; i < data.length; i++) {
+        const el = data[i];
+
+        if (!drillholesNames.includes(el[0])) {
+            drillholesNames.push()
+            console.log(drillholesNames)
+        }
+    }
+    console.log(drillholesNames)
+    return drillholesNames;
+}
 export default a;
