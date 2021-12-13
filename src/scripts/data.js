@@ -23,28 +23,6 @@ var data = [
     ],
     [
         "BDD-1001",
-        "-2.478067976",
-        "-1.040157406",
-        "-9.632094875",
-        "7.3",
-        "0.73",
-        "5.2",
-        "0.52",
-        "0.303"
-    ],
-    [
-        "BDD-1001",
-        "-5.089094135",
-        "-2.046621566",
-        "-19.23259342",
-        "8.5",
-        "0.85",
-        "7.5",
-        "0.75",
-        "0.466"
-    ],
-    [
-        "BDD-1001",
         "-7.695944007",
         "-3.104623569",
         "-28.82868458",
@@ -54,39 +32,9 @@ var data = [
         "0.85",
         "0.054"
     ],
-    [
-        "BDD-1001",
-        "-10.30721042",
-        "-4.195869126",
-        "-38.41985087",
-        "5.5",
-        "0.55",
-        "4.5",
-        "0.45",
-        "0.218"
-    ],
-    [
-        "BDD-1001",
-        "-12.92668515",
-        "-5.276073588",
-        "-48.01002868",
-        "2.1",
-        "0.21",
-        "1.1",
-        "0.11",
-        "0.108"
-    ],
-    [
-        "BDD-1001",
-        "-15.53616048",
-        "-6.35855475",
-        "-57.6026755",
-        "1.1",
-        "0.11",
-        "1.1",
-        "0.11",
-        "0.021"
-    ],
+
+
+
     [
         "BDD-1001",
         "-18.11689669",
@@ -1750,6 +1698,7 @@ var data = [
 //     "RQD_Value",
 //     "Rqd_perc",
 //     "RMR_value"
+
 var a = data.map(el => {
     var b = {};
     b.HOLE_NUMBER = el[0];
@@ -1779,3 +1728,36 @@ export const drillNames = () => {
     return drillholesNames;
 }
 export default a;
+
+ // var single_drill = [];
+        // for (let i = 0; i < a.length - 1; i++) {
+        //     if (a[i]["HOLE_NUMBER"] === a[i + 1]["HOLE_NUMBER"] && i != a.length - 1) {
+        //         single_drill.push(new THREE.Vector3(a[i].y, a[i].z, a[i].x));
+
+        //     }
+        //     else {
+        //         var closedSpline = new THREE.CatmullRomCurve3(single_drill);
+        //         var tubeGeometry = new THREE.TubeGeometry(closedSpline, 30, 5, 12, true);
+        //         var shaderMaterialTube = new THREE.ShaderMaterial({
+        //             uniforms: uniforms,
+        //             vertexShader: _VS,
+        //             fragmentShader: _FS
+        //         })
+
+        //         var tubeMesh = new THREE.Mesh(tubeGeometry, shaderMaterialTube);
+
+                //scene.add(tubeMesh);
+                //var meshasd = new THREE.Mesh(geometry1, material1);
+
+                // var lineMat = new THREE.ShaderMaterial({
+                //     uniforms : {},
+                //     vertexShader: _VS,
+                //     fragmentShader: _FS
+                // })
+                // var lineMesh = new THREE.Mesh(geometry1, lineMat);
+                // scene.add(lineMesh)
+        //         single_drill = [];
+        //         break;
+        //     }
+
+        // }

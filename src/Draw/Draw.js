@@ -2,11 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import whichColor from "../scripts/helpers/colors";
-import a from "./data";
+import a from "../scripts/data";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { Lut } from 'three/examples/jsm/math/Lut.js';
 import "./Draw.css"
-import { AxisHelper } from "three";
 
 var drillholesNames = [];
 for (let i = 0; i < a.length; i++) {
@@ -19,9 +17,6 @@ for (let i = 0; i < a.length; i++) {
 function Draw() {
     const mountRef = useRef(null);
     const [choosenDrillPart, setChoosenDrillPart] = useState()
-    const [positionX, setpositionX] = useState(0);
-    const [positionY, setpositionY] = useState(0);
-    const [positionZ, setpositionZ] = useState(0);
     const [rmrValue, setrmrValue] = useState(0)
     var scene = new THREE.Scene();
     useEffect(() => {
@@ -38,12 +33,10 @@ function Draw() {
 
         mountRef.current.appendChild(renderer.domElement);
 
-        var holderMount = mountRef.current;
         camera.position.setZ(400);
         camera.position.setY(-100);
         scene.background = new THREE.Color(0xffffff);
 
- 
         // add tubes one by one
         for (let i = 0; i < a.length - 1; i++) {
 
